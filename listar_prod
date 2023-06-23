@@ -1,4 +1,11 @@
 import java.util.ArrayList;
 public class listar_prod {
-  
+  public void (String prod){
+    incluir_prod p = new incluir_prod();
+    for(String i : p.produto){
+      if(i == prod){
+        System.out.println(p.produto.get(i));
+      }
+    }
+  }
 }
