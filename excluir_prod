@@ -1,3 +1,11 @@
+import java.util.ArrayList;
 public class excluir_prod {
-
+  public void (String prod){
+    incluir_prod p = new incluir_prod;
+    for(String i : p.produto){
+      if(i == prod){
+        p.produto.remove(i);
+      }
+    }
+  }
 }
