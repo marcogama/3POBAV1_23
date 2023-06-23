@@ -1,3 +1,7 @@
+import java.util.ArrayList;
 public class incluir_prod {
-
+  public void (String prod){
+    ArrayList<String> produto = new ArrayList<String>();
+    produto.add (prod);
+  }
 }
