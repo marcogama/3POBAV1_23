@@ -1,5 +1,6 @@
 public class produto {
 
+	int id, cod_bar;
 	float peso, preco;
 	String sku, nome, descr, fab, categ;
 	public produto(int id, int cod_bar, float peso, float preco, String sku, String nome, String descr, String fab,
@@ -15,7 +16,7 @@ public class produto {
 		this.fab = fab;
 		this.categ = categ;
 	}
-	int id, cod_bar;
+	
 	private float getPeso() {
 		return peso;
 	}
