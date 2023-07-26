@@ -8,16 +8,65 @@ public class Main {
 
 		//Atributos
 		int id, cod_bar;
+		id = 1;
+		cod_bar = 10000;
 		float peso, preco;
 		String sku, nome, descr, fab, categ;
 		
 		// Classe Scanner
 		Scanner digite = new Scanner(System.in);
 
+		// Classe ArrayList
+		ArrayList prod = new ArrayList<String>
+
 		// Classe incluir_prod
 		Incluir_prod newProd = new Incluir_prod(id, cod_bar, peso, preco, sku, nome, descr, fab, categ); 
-		switch(opcao){
+
+		System.out.println("/nMENU DE OPÇÕES/n");
+		System.out.println("1 - Incluir produto");
+		System.out.println("2 - Excluir produto");
+		System.out.println("3 - Alterar produto");
+		System.out.println("4 - Listar um produto");
+		System.out.println("5 - Listar todos os produtos");
+
+		System.out.println("Digite a opção.");
+		digite = nextInt();
+		
+		switch(digite){
 			case 1:
+				Produto newProd[id] = new Produto(id, cod_bar, 0, 0, NULL, NULL, NULL, NULL, NULL);
+				
+				System.out.println("Digite o peso do produto.");
+				peso = nextDouble();
+				newProd[id].setPeso(peso);
+
+				System.out.println("Digite o preço do produto.");
+				preco = nextDouble();
+				newProd[id].setPreco(preco);
+
+				System.out.println("Digite o sku do produto.");
+				sku = next();
+				newProd[id].setSku(sku);
+
+				System.out.println("Digite o nome do produto.");
+				nome = next();
+				newProd[id].setNome(nome);
+
+				System.out.println("Descreva o produto.");
+				descr = next();
+				newProd[id].setDescr(descr);
+
+				System.out.println("Digite a data de fabricação.");
+				fab = next();
+				newProd[id].setFab(fab);
+
+				System.out.println("Digite a categoria do produto");
+				categ = next();
+				newProd[id].setCateg(categ);
+
+				prod.add(id + " : " = nome);
+				id += 1;
+				cod_bar += 1;
 				break;
 			case 2:
 				break;
