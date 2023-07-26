@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.ArrayList;
 
-public class listar_prod {
+public class Listar_prod {
   public void (String prod, produto){
     incluir_prod p = new incluir_prod();
     for(String i : produto){
