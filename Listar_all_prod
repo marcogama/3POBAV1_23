@@ -1,4 +1,4 @@
-public class listar_all_prod {
+public class Listar_all_prod {
   
   public void lista_all(){
     incluir_prod p = new incluir_prod();
