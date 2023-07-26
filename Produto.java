@@ -1,4 +1,4 @@
-public class produto {
+public class Produto {
 
 	int id, cod_bar;
 	float peso, preco;
