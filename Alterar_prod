@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class alterar_prod {
+public class Alterar_prod {
   public void altera(String prod, String new_prod){
     incluir_prod p = new incluir_prod();
     for(String i : p.produto){
