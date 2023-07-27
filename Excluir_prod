@@ -7,5 +7,5 @@ public class Excluir_prod {
         p.produto.remove(i);
       }
     }
-  }
+  } 
 }
