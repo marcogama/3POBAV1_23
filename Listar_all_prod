@@ -1,8 +1,1 @@
-public class Listar_all_prod {
-  
-  public void lista_all(){
-    incluir_prod p = new incluir_prod();
-    for(String i : p.produto)
-      System.out.println(i);  
-  }
-}
+
