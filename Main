@@ -19,9 +19,6 @@ public class Main {
 		// Classe ArrayList
 		ArrayList prod = new ArrayList<String>
 
-		// Classe incluir_prod
-		Incluir_prod newProd = new Incluir_prod(id, cod_bar, peso, preco, sku, nome, descr, fab, categ); 
-
 		System.out.println("/nMENU DE OPÇÕES/n");
 		System.out.println("1 - Incluir produto");
 		System.out.println("2 - Excluir produto");
@@ -33,9 +30,12 @@ public class Main {
 		digite = nextInt();
 		
 		switch(digite){
-			case 1:
-				Produto newProd[id] = new Produto(id, cod_bar, 0, 0, NULL, NULL, NULL, NULL, NULL);
-				
+			
+				case 1:
+				Produto newProd[id] = new Produto(id, cod_bar, 0, 0, NULL, NULL, NULL, NULL, NULL); 			//Criando uma instância do objeto Produto
+
+				//Setando os campos do novo produto
+
 				System.out.println("Digite o peso do produto.");
 				peso = nextDouble();
 				newProd[id].setPeso(peso);
@@ -64,9 +64,9 @@ public class Main {
 				categ = next();
 				newProd[id].setCateg(categ);
 
-				prod.add(id + " : " + nome);
-				id += 1;
-				cod_bar += 1;
+				prod.add(id + " : " + nome);				//Adicionando o novo produto na ArrayList prod
+				id += 1;						//Incrementando id
+				cod_bar += 1;						//Incrementando cod_bar
 				break;
 			case 2:
 
@@ -74,7 +74,7 @@ public class Main {
 				nome = next();
 				for(String i : prod){
 
-					if(i.contains(nome))
+					if(i.contains(nome))				//Verifica se o nome existe na ArrayList
 						remove(i);
 					else
 					   System.out.println("Nome não encontrado");
@@ -84,18 +84,110 @@ public class Main {
 				System.out.println("Digite o nome do produto a ser alterado");
 				nome = next();
 				for(String i : prod){
-					if(i.contains(nome))
-						id = Integer.parseInt(id.copyValueOf(i,0,i.indexOf(" ")));
+					if(i.contains(nome)){						   //Verifica se o nome existe na ArrayList
+						id = Integer.parseInt(id.copyValueOf(i,0,i.indexOf(" "))); //Comando de atribuiçao ao id a substring "id" do ArrayList
+						System.out.println("/nMENU DE OPÇÕES/n");
+						System.out.println("1 - Nome");
+						System.out.println("2 - Descrição");
+						System.out.println("3 - Fabricante");
+						System.out.println("4 - Peso");
+						System.out.println("5 - Preço");
+						System.out.println("6 - SKU");
+						System.out.println("7 - Categoria");
+
+						System.out.println("Escolha a opção.");
+						digite = nextnt();
+						
+						Switch(digite){						//Sets da mudança no produto desejado
+							
+							case 1:
+								
+								System.out.println("Digite o nome");
+								nome = next();
+								newProd[id].setNome(nome);
+								break;
+
+							case 2:
+								
+								System.out.println("Descreva do produto");
+								descr = next();
+								newProd[id].setDescr(descr);
+								break;
+
+							case 3:
+
+								System.out.println("Digite o fabricante");
+								fab = next();
+								newProd[id].setFab(fab);
+								break;
+
+							case 4:
+
+								System.out.println("Digite o peso");
+								peso = nextDouble();
+								newProd[id].setPeso(peso);
+								break;
+
+							case 5:
+
+								System.out.println("Digite o preço");
+								preco = nextDouble();
+								newProd[id].setPreco(preco);
+								break;
+
+							case 6:
+
+								System.out.println("Digite o SKU");
+								sku = next();
+								newProd[id].setSku(sku);
+								break;
+
+							case 7:
+
+								System.out.println("Digite a categoria");
+								categ = next();
+								newProd[id].setCateg(categ);
+								break;
+
+							default:
+								System.out.println("Opção invalida");
+						}
+					}else
+					   System.out.println("Produto não encontrado");
 				}
 				break;
 			case 4:
+
+				System.out.println("Digite o nome do produto a ser listado");
+				nome = next();
+				for(String i : prod){
+					if(i.contains(nome)){						   //Verifica se o nome existe na ArrayList
+						id = Integer.parseInt(id.copyValueOf(i,0,i.indexOf(" "))); //Comando de atribuiçao ao id a substring "id" do ArrayList
+
+						//Gets do produto a ser listado
+						
+						System.out.println("Id : " + newProd[id].getId());
+						System.out.println("Codigo barra : " + newProd[id].getCod_bar());
+						System.out.println("Nome : " + newProd[id].getNome());
+						System.out.println("Descrição : " + newProd[id].getDescr());
+						System.out.println("Categoria : " + newProd[id].getCateg());
+						System.out.println("SKU : " + newProd[id].getSku());
+						System.out.println("Peso : " + newProd[id].getPeso());
+						System.out.println("Preço : " + newProd[id].getPreco());
+						System.out.println("Fabricante : " + newProd[id].getFab());
+					}else
+						System.out.println("Produto não encontrado.);
+				}
 				break;
 			case 5:
+
+				for(String i : prod)						//Imprimindo a ArrayList prod
+					System.out.println(i);
 				break;
 			default
 				System.out.println("Opcao invalida");
 		}
-
+		digite.close();									//Fechando a classe Scanner
 	}
 
 }
