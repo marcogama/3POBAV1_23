@@ -64,13 +64,29 @@ public class Main {
 				categ = next();
 				newProd[id].setCateg(categ);
 
-				prod.add(id + " : " = nome);
+				prod.add(id + " : " + nome);
 				id += 1;
 				cod_bar += 1;
 				break;
 			case 2:
+
+				System.out.println("Digite o nome do produto a ser excluido");
+				nome = next();
+				for(String i : prod){
+
+					if(i.contains(nome))
+						remove(i);
+					else
+					   System.out.println("Nome não encontrado");
+				}
 				break;
 			case 3:
+				System.out.println("Digite o nome do produto a ser alterado");
+				nome = next();
+				for(String i : prod){
+					if(i.contains(nome))
+						id = Integer.parseInt(id.copyValueOf(i,0,i.indexOf(" ")));
+				}
 				break;
 			case 4:
 				break;
