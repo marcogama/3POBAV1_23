@@ -1,11 +1,1 @@
-import java.util.ArrayList;
-public class Alterar_prod {
-  public void altera(String prod, String new_prod){
-    incluir_prod p = new incluir_prod();
-    for(String i : p.produto){
-      if(i == prod){
-        p.produto.set(i, new_prod);
-      }
-    }
-  }
-}
+
